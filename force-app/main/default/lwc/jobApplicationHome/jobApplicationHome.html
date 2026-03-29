@@ -1,0 +1,49 @@
+<template>
+    <lightning-card title="Job Tracker Home" icon-name="custom:custom63">
+        <div class="slds-p-horizontal_medium slds-p-bottom_small">
+            <p class="slds-text-body_small">
+                Track your pipeline at a glance and follow up on recent applications quickly.
+            </p>
+        </div>
+
+        <div class="kpi-grid slds-p-horizontal_medium slds-p-bottom_medium">
+            <div class="kpi-tile">
+                <div class="kpi-label">Total</div>
+                <div class="kpi-value">{summary.totalApplications}</div>
+            </div>
+            <div class="kpi-tile">
+                <div class="kpi-label">Applied</div>
+                <div class="kpi-value">{summary.appliedCount}</div>
+            </div>
+            <div class="kpi-tile">
+                <div class="kpi-label">Interview</div>
+                <div class="kpi-value">{summary.interviewCount}</div>
+            </div>
+            <div class="kpi-tile">
+                <div class="kpi-label">Offer</div>
+                <div class="kpi-value">{summary.offerCount}</div>
+            </div>
+            <div class="kpi-tile">
+                <div class="kpi-label">Rejected</div>
+                <div class="kpi-value">{summary.rejectedCount}</div>
+            </div>
+        </div>
+
+        <div class="slds-p-horizontal_medium slds-p-bottom_small">
+            <lightning-button
+                label="Refresh"
+                icon-name="utility:refresh"
+                onclick={handleRefresh}
+            ></lightning-button>
+        </div>
+
+        <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+            <lightning-datatable
+                key-field="Id"
+                data={recentApplications}
+                columns={columns}
+                hide-checkbox-column
+            ></lightning-datatable>
+        </div>
+    </lightning-card>
+</template>
