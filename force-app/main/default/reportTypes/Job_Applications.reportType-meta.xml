@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Job_Application__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Report type for tracking job applications by stage.</description>
+    <label>Job Applications</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Job_Application__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Company_Name__c</field>
+            <table>Job_Application__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Role__c</field>
+            <table>Job_Application__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Status__c</field>
+            <table>Job_Application__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Date_Applied__c</field>
+            <table>Job_Application__c</table>
+        </columns>
+        <masterLabel>Job Applications</masterLabel>
+    </sections>
+</ReportType>

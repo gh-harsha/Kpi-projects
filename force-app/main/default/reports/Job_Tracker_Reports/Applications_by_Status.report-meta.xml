@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Job_Application__c.Name</field>
+    </columns>
+    <columns>
+        <field>Job_Application__c.Company_Name__c</field>
+    </columns>
+    <columns>
+        <field>Job_Application__c.Role__c</field>
+    </columns>
+    <columns>
+        <field>Job_Application__c.Status__c</field>
+    </columns>
+    <description>Count job applications grouped by status for demo storytelling.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>None</dateGranularity>
+        <field>Job_Application__c.Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Applications by Status</name>
+    <reportType>Job_Applications__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+</Report>
